@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--New colours cafe-->
+    <color name="purple">#552F62</color>
+    <color name="blue">#51D0E7</color>
+    <color name="white">#F4EDE1</color>
+    <color name="yellow">#FFCC7C</color>
+</resources>
