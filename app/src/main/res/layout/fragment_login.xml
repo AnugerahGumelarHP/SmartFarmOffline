@@ -51,7 +51,7 @@
 
         <!--Button Login-->
         <TextView
-            android:id="@+id/fitur_login_user"
+            android:id="@+id/fitur_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login"

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:background="@drawable/roun_rect_blue"
+        android:layout_centerInParent="true">
+        <!--Teks Info-->
+        <TextView
+            android:id="@+id/txt_input_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/data_beras"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/purple"
+            android:layout_margin="10dp"/>
+
+        <!--Nama Beras-->
+        <TextView
+            android:id="@+id/txt_input_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_beras"
+            android:textStyle="bold"
+            android:textColor="@color/purple"/>
+        <EditText
+            android:id="@+id/edt_input_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_nama_beras"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/yellow"
+            />
+
+        <!--Jenis Beras-->
+        <TextView
+            android:id="@+id/txt_input_jenis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/jenis_beras"
+            android:textStyle="bold"
+            android:textColor="@color/purple"/>
+        <EditText
+            android:id="@+id/edt_input_jenis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_jenis_beras"
+            android:textColorHint="@color/yellow"/>
+
+        <!--Tahun Panen-->
+        <TextView
+            android:id="@+id/txt_input_tahun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tahun_panen"
+            android:textStyle="bold"
+            android:textColor="@color/purple"/>
+        <EditText
+            android:id="@+id/edt_input_tahun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_tahun_panen"
+            android:textColorHint="@color/yellow"/>
+
+        <!--Jenis Beras-->
+        <TextView
+            android:id="@+id/txt_input_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/deskripsi_beras"
+            android:textStyle="bold"
+            android:textColor="@color/purple"/>
+        <EditText
+            android:id="@+id/edt_input_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_deskripsi_beras"
+            android:textColorHint="@color/yellow"/>
+
+        <!--Nama Penjual-->
+        <TextView
+            android:id="@+id/txt_input_nama_penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_penjual"
+            android:textStyle="bold"
+            android:textColor="@color/purple"/>
+        <EditText
+            android:id="@+id/edt_input_nama_penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_nama_penjual"
+            android:textColorHint="@color/yellow"/>
+
+        <!--Alamat Penjual-->
+        <TextView
+            android:id="@+id/txt_input_alamat_penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alamat_penjual"
+            android:textStyle="bold"
+            android:textColor="@color/purple"/>
+        <EditText
+            android:id="@+id/edt_alamat_penjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/masukkan_alamat_penjual"
+            android:textColorHint="@color/yellow"/>
+        <!--Button Login-->
+        <TextView
+            android:id="@+id/fitur_input_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/simpan_data"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roun_rect_yellow"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

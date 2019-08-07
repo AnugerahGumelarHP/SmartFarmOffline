@@ -14,4 +14,20 @@
     <string name="discover">Discover</string>
     <string name="account">Account</string>
     <string name="search_hint">Search Your Rice</string>
+    <string name="Input">Input</string>
+    <string name="profile">Profile</string>
+    <string name="data_beras">Data Beras</string>
+    <string name="nama_beras">Nama Beras</string>
+    <string name="masukkan_nama_beras">Masukkan Nama Beras</string>
+    <string name="jenis_beras">Jenis Beras</string>
+    <string name="masukkan_tahun_panen">Masukkan tahun panen</string>
+    <string name="deskripsi_beras">Deskripsi Beras</string>
+    <string name="masukkan_deskripsi_beras">Masukkan deskripsi beras</string>
+    <string name="simpan_data">Simpan</string>
+    <string name="masukkan_alamat_penjual">Masukkan alamat penjual</string>
+    <string name="alamat_penjual">Alamat Penjual</string>
+    <string name="masukkan_nama_penjual">Masukkan nama penjual</string>
+    <string name="tahun_panen">Tahun Panen</string>
+    <string name="nama_penjual">Nama Penjual</string>
+    <string name="masukkan_jenis_beras">Masukkan Jenis Beras</string>
 </resources>
