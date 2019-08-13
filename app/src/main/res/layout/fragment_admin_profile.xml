@@ -3,22 +3,72 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:id="@+id/txt_welcome"
+    android:orientation="vertical"
+    android:padding="@dimen/padding">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to SmartFarm"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:textColor="@color/purple"/>
-    <ImageView
-        android:id="@+id/img_home"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:src="@drawable/riceapp"
-        android:layout_below="@+id/txt_welcome"
-        android:layout_marginTop="10dp"/>
+        android:orientation="vertical"
+        android:background="@drawable/roun_rect_blue"
+        android:layout_centerInParent="true">
+
+        <!--Teks Profile-->
+        <TextView
+            android:id="@+id/txt_input_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/biodata_admin"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/purple"
+            android:layout_margin="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/ic_launcher_background">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_launcher_foreground"/>
+
+        </LinearLayout>
+
+
+        <!--Nama Admin-->
+        <TextView
+            android:id="@+id/txt_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nurul Aini"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/purple"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <!--Nim Admin-->
+        <TextView
+            android:id="@+id/txt_profile_nim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123140049"
+            android:textColor="@color/purple"
+            android:layout_gravity="center"/>
+
+        <!--Button Logout-->
+        <TextView
+            android:id="@+id/fitur_profile_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roun_rect_yellow"/>
+    </LinearLayout>
 
 </RelativeLayout>

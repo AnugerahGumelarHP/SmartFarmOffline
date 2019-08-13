@@ -30,4 +30,7 @@
     <string name="tahun_panen">Tahun Panen</string>
     <string name="nama_penjual">Nama Penjual</string>
     <string name="masukkan_jenis_beras">Masukkan Jenis Beras</string>
+    <string name="biodata_admin">Biodata Admin</string>
+    <string name="nama_admin">Nama Admin</string>
+    <string name="logout">LOGOUT</string>
 </resources>
