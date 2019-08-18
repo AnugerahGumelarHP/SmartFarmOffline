@@ -26,7 +26,7 @@ public class Login extends Fragment {
     }
 
     // Method ini dipanggil sesaat setelah onCreateView().
-    // Semua pembacaan view dan penambahan listener dilakukan disini (atau          // bisa juga didalam onCreateView)
+    // Semua pembacaan view dan penambahan listener dilakukan disini (atau // bisa juga didalam onCreateView)
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         txt_email = view.findViewById(R.id.txt_login_email);

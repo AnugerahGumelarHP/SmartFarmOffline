@@ -109,7 +109,7 @@
             android:textStyle="bold"
             android:textColor="@color/purple"/>
         <EditText
-            android:id="@+id/edt_alamat_penjual"
+            android:id="@+id/edt_input_alamat_penjual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/masukkan_alamat_penjual"
