@@ -44,13 +44,13 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.Myholder
 
     @Override
     public void onBindViewHolder(Myholder holder, int position) {
-        DataModel dataModel=dataModelArrayList.get(position);
+        DataModel dataModel= dataModelArrayList.get(position);
         holder.name.setText(dataModel.getName());
         holder.type.setText(dataModel.getType());
         holder.year.setText(dataModel.getYear());
         holder.desc.setText(dataModel.getDescrip());
         holder.owner.setText(dataModel.getOwner());
-        holder.owner.setText(dataModel.getOwneradd());
+        holder.owneradd.setText(dataModel.getOwneradd());
     }
 
     @Override
