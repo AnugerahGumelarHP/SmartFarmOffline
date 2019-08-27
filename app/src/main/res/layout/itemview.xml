@@ -185,7 +185,7 @@
                         <TextView
                             android:layout_width="110dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/alamat_penjual"
+                            android:text="@string/jarak_penjual"
                             android:textColor="@color/purple"
                             android:textSize="15sp" />
                         <TextView
@@ -195,17 +195,18 @@
                             android:textColor="@color/purple"
                             android:layout_marginEnd="5dp"
                             android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/owneradd1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/jarak_penjual"
+                            android:textColor="@color/purple"
+                            android:maxLines="1"
+                            android:textSize="14sp" />
                     </LinearLayout>
-                    <TextView
-                        android:id="@+id/owneradd1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="@string/alamat_penjual"
-                        android:textColor="@color/purple"
-                        android:textSize="14sp" />
-
                 </LinearLayout>
+
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

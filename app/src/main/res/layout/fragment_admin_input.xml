@@ -107,7 +107,7 @@
             android:id="@+id/txt_input_alamat_penjual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/alamat_penjual"
+            android:text="@string/jarak_penjual"
             android:textStyle="bold"
             android:textColor="@color/purple"/>
         <EditText
