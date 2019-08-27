@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
 
     <RelativeLayout
@@ -17,7 +18,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="5dp"
                 android:orientation="horizontal"
@@ -46,14 +47,16 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:text="@string/nama_beras"
+                            android:textColor="@color/purple"
                             android:textSize="15sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=":"
+                            android:textColor="@color/purple"
                             android:layout_marginEnd="5dp"
                             android:textSize="15sp" />
                         <TextView
@@ -61,6 +64,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/nama_beras"
+                            android:textColor="@color/purple"
                             android:textSize="15sp" />
                     </LinearLayout>
 
@@ -70,14 +74,16 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:text="@string/jenis_beras"
+                            android:textColor="@color/purple"
                             android:textSize="15sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=":"
+                            android:textColor="@color/purple"
                             android:layout_marginRight="5dp"
                             android:textSize="15sp" />
                         <TextView
@@ -85,6 +91,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/jenis_beras"
+                            android:textColor="@color/purple"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -94,14 +101,16 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:text="@string/tahun_panen"
+                            android:textColor="@color/purple"
                             android:textSize="15sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=":"
+                            android:textColor="@color/purple"
                             android:layout_marginEnd="5dp"
                             android:textSize="15sp" />
                         <TextView
@@ -109,6 +118,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/tahun_panen"
+                            android:textColor="@color/purple"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -118,23 +128,26 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:text="@string/deskripsi_beras"
+                            android:textColor="@color/purple"
                             android:textSize="15sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=":"
+                            android:textColor="@color/purple"
                             android:layout_marginRight="5dp"
                             android:textSize="15sp" />
-                        <TextView
-                            android:id="@+id/desc1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/deskripsi_beras"
-                            android:textSize="14sp" />
                     </LinearLayout>
+                    <TextView
+                        android:id="@+id/desc1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deskripsi_beras"
+                        android:textColor="@color/purple"
+                        android:textSize="14sp" />
 
                     <!--Menampilkan nama penjual-->
                     <LinearLayout
@@ -142,14 +155,16 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:text="@string/nama_penjual"
+                            android:textColor="@color/purple"
                             android:textSize="15sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=":"
+                            android:textColor="@color/purple"
                             android:layout_marginEnd="5dp"
                             android:textSize="15sp" />
                         <TextView
@@ -158,6 +173,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
                             android:text="@string/nama_penjual"
+                            android:textColor="@color/purple"
                             android:textSize="14sp" />
                     </LinearLayout>
 
@@ -167,24 +183,27 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:text="@string/alamat_penjual"
+                            android:textColor="@color/purple"
                             android:textSize="15sp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=":"
+                            android:textColor="@color/purple"
                             android:layout_marginEnd="5dp"
                             android:textSize="15sp" />
-                        <TextView
-                            android:id="@+id/owneradd1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="@string/alamat_penjual"
-                            android:textSize="14sp" />
                     </LinearLayout>
+                    <TextView
+                        android:id="@+id/owneradd1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/alamat_penjual"
+                        android:textColor="@color/purple"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
             </LinearLayout>

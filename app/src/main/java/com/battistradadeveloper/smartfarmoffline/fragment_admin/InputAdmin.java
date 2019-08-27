@@ -35,6 +35,8 @@ public class InputAdmin extends Fragment {
     // Semua pembacaan view dan penambahan listener dilakukan disini (atau // bisa juga didalam onCreateView)
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+        databaseHelper = new DatabaseHelper(getActivity());
+
     //  Tulisan info di bagian atas
         txt_admin_info = view.findViewById(R.id.txt_input_info);
 
