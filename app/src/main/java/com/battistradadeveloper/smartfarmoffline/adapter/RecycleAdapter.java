@@ -22,7 +22,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.Myholder
     }
 
     class Myholder extends RecyclerView.ViewHolder{
-        TextView name,type,year, desc, owner,owneradd;
+        TextView name,type, year, desc, price, owner, owneradd;
 
         public Myholder(View itemView) {
             super(itemView);
@@ -31,6 +31,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.Myholder
             type = itemView.findViewById(R.id.type1);
             year = itemView.findViewById(R.id.year1);
             desc = itemView.findViewById(R.id.desc1);
+            price = itemView.findViewById(R.id.price1);
             owner = itemView.findViewById(R.id.owner1);
             owneradd = itemView.findViewById(R.id.owneradd1);
         }
@@ -51,6 +52,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.Myholder
         holder.desc.setText(dataModel.getDescrip());
         holder.owner.setText(dataModel.getOwner());
         holder.owneradd.setText(dataModel.getOwneradd());
+        holder.price.setText(dataModel.getPrice());
     }
 
     @Override

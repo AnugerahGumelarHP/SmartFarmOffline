@@ -8,17 +8,20 @@ public class DataModel {
     private String descrip;
     private String owner;
     private String owneradd;
+    private String price;
 
     public DataModel(){
     }
 
-    public DataModel(String name, String type, String year, String descrip, String owner, String owneradd) {
+    public DataModel(String name, String type, String year, String descrip, String owner,
+                     String owneradd, String price) {
         this.name = name;
         this.type = type;
         this.year = year;
         this.descrip = descrip;
         this.owner = owner;
         this.owneradd = owneradd;
+        this.price = price;
     }
 
     public int getId(){
@@ -73,4 +76,11 @@ public class DataModel {
         this.owneradd = owneradd;
     }
 
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 }

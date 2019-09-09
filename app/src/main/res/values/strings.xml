@@ -35,4 +35,13 @@
     <string name="biodata_admin">Biodata Admin</string>
 
     <string name="logout">LOGOUT</string>
+    <string name="harga_beras">Harga Beras</string>
+    <string name="masukkan_harga_beras">Masukkan Harga Beras</string>
+    <string name="titik_dua">:</string>
+    <string name="putih">Putih</string>
+    <string name="merah">Merah</string>
+    <string name="hitam">Hitam</string>
+    <string name="_2019"></string>
+    <string name="Sebelum_2019"><![CDATA[< 2019]]></string>
+    <string name="tahun_2019">2019</string>
 </resources>

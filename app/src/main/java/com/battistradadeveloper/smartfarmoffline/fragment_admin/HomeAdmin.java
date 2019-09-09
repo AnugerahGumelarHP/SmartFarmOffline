@@ -25,7 +25,7 @@ public class HomeAdmin extends Fragment{
     RecyclerView recyclerView;
     RecycleAdapter recycler;
     List<DataModel> datamodel;
-    SearchView searchdata;
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,

@@ -7,6 +7,7 @@
     android:padding="@dimen/padding">
 
     <LinearLayout
+        android:id="@+id/linear_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -59,6 +60,29 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/roun_rect_yellow"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_register_penjual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linear_login"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/txt_info_penjual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apakah anda seorang pedagang?"
+            android:textColor="@color/purple"
+            android:layout_marginEnd="5dp"/>
+        <TextView
+            android:id="@+id/txt_register_penjual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar Sekarang !"
+            android:textColor="@color/yellow"/>
     </LinearLayout>
 
 </RelativeLayout>

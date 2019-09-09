@@ -24,100 +24,157 @@
             android:textColor="@color/purple"
             android:layout_margin="10dp"/>
 
-        <!--Nama Beras-->
-        <TextView
-            android:id="@+id/txt_input_nama"
+        <!--Form untuk input-->
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/nama_beras"
-            android:textStyle="bold"
-            android:textColor="@color/purple"/>
-        <EditText
-            android:id="@+id/edt_input_nama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/masukkan_nama_beras"
-            android:inputType="textEmailAddress"
-            android:textColorHint="@color/yellow"
-            />
+            android:layout_height="400dp"
+            android:id="@+id/sv_input">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--Nama Beras-->
+                <TextView
+                    android:id="@+id/txt_input_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nama_beras"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple"/>
+                <EditText
+                    android:id="@+id/edt_input_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukkan_nama_beras"
+                    android:inputType="textCapWords"
+                    android:textColorHint="@color/yellow"
+                    android:maxLines="1"/>
 
-        <!--Jenis Beras-->
-        <TextView
-            android:id="@+id/txt_input_jenis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/jenis_beras"
-            android:textStyle="bold"
-            android:textColor="@color/purple"/>
-        <EditText
-            android:id="@+id/edt_input_jenis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/masukkan_jenis_beras"
-            android:textColorHint="@color/yellow"/>
+                <!--Jenis Beras-->
+                <TextView
+                    android:id="@+id/txt_input_jenis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jenis_beras"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple"/>
+                <RadioGroup
+                    android:id="@+id/rad_jenis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rad_putih"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/putih"/>
+                    <RadioButton
+                        android:id="@+id/rad_merah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/merah"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"/>
+                    <RadioButton
+                        android:id="@+id/rad_hitam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hitam"/>
+                </RadioGroup>
 
-        <!--Tahun Panen-->
-        <TextView
-            android:id="@+id/txt_input_tahun"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/tahun_panen"
-            android:textStyle="bold"
-            android:textColor="@color/purple"/>
-        <EditText
-            android:id="@+id/edt_input_tahun"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/masukkan_tahun_panen"
-            android:inputType="date"
-            android:textColorHint="@color/yellow"/>
+                <!--Tahun Panen-->
+                <TextView
+                    android:id="@+id/txt_input_tahun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tahun_panen"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple"/>
+                <RadioGroup
+                    android:id="@+id/rad_tahun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rad_before_2019"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Sebelum_2019"
+                        android:layout_marginEnd="10dp"/>
+                    <RadioButton
+                        android:id="@+id/rad_2019"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tahun_2019"/>
+                </RadioGroup>
 
-        <!--Jenis Beras-->
-        <TextView
-            android:id="@+id/txt_input_deskripsi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/deskripsi_beras"
-            android:textStyle="bold"
-            android:textColor="@color/purple"/>
-        <EditText
-            android:id="@+id/edt_input_deskripsi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/masukkan_deskripsi_beras"
-            android:textColorHint="@color/yellow"/>
+                <!--Harga Beras-->
+                <TextView
+                    android:id="@+id/txt_input_harga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/harga_beras"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple"/>
+                <EditText
+                    android:id="@+id/edt_input_harga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukkan_harga_beras"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/yellow"/>
 
-        <!--Nama Penjual-->
-        <TextView
-            android:id="@+id/txt_input_nama_penjual"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/nama_penjual"
-            android:textStyle="bold"
-            android:textColor="@color/purple"/>
-        <EditText
-            android:id="@+id/edt_input_nama_penjual"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/masukkan_nama_penjual"
-            android:textColorHint="@color/yellow"/>
+                <!--Deskripsi Beras-->
+                <TextView
+                    android:id="@+id/txt_input_deskripsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deskripsi_beras"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple"/>
+                <EditText
+                    android:id="@+id/edt_input_deskripsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukkan_deskripsi_beras"
+                    android:inputType="text"
+                    android:textColorHint="@color/yellow"/>
 
-        <!--Alamat Penjual-->
-        <TextView
-            android:id="@+id/txt_input_alamat_penjual"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/jarak_penjual"
-            android:textStyle="bold"
-            android:textColor="@color/purple"/>
-        <EditText
-            android:id="@+id/edt_input_alamat_penjual"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/masukkan_alamat_penjual"
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/yellow"/>
-        <!--Button Login-->
+                <!--Nama Penjual-->
+                <TextView
+                    android:id="@+id/txt_input_nama_penjual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nama_penjual"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple"/>
+                <EditText
+                    android:id="@+id/edt_input_nama_penjual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukkan_nama_penjual"
+                    android:textColorHint="@color/yellow"/>
+
+                <!--Alamat Penjual-->
+                <TextView
+                    android:id="@+id/txt_input_alamat_penjual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jarak_penjual"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple"/>
+                <EditText
+                    android:id="@+id/edt_input_alamat_penjual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukkan_alamat_penjual"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/yellow"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!--Button Simpan-->
         <TextView
             android:id="@+id/fitur_input_simpan"
             android:layout_width="match_parent"

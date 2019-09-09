@@ -14,17 +14,18 @@ import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static String DATABASE = "Buyer.db"; //Nama Database
-    public static String TABLE ="buyertable"; //Nama Tabel
-    public static String COLUMN_ID = "id";
-    public static String NAME ="name"; //Nama Kolom Nama
-    public static String TYPE = "type"; //Nama Kolom Type
-    public static String YEAR ="year";//Nama Kolom Year
-    public static String DESC ="descrip"; //Nama Kolom Description
-    public static String OWNER ="owner"; //Nama kolom Owner
-    public static String OWNERADD ="owneradd"; //Nama kolom Owner Address
+    private static String DATABASE = "Buyer.db"; //Nama Database
+    private static String TABLE ="buyertable"; //Nama Tabel
+    private static String COLUMN_ID = "id";
+    private static String NAME ="name"; //Nama Kolom Nama
+    private static String TYPE = "type"; //Nama Kolom Type
+    private static String YEAR ="year";//Nama Kolom Year
+    private static String DESC ="descrip"; //Nama Kolom Description
+    private static String OWNER ="owner"; //Nama kolom Owner
+    private static String OWNERADD ="owneradd"; //Nama kolom Owner Address
+    private static String PRICE ="price"; //Nama Kolom Harga
 
-    String br;
+    private String br;
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE, null, 1);
@@ -39,7 +40,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + YEAR + " TEXT, "
                 + DESC + " TEXT, "
                 + OWNER + " TEXT, "
-                + OWNERADD + " TEXT );";
+                + OWNERADD + " TEXT, "
+                + PRICE + " TEXT );";
         db.execSQL(br);
     }
 
@@ -61,6 +63,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(DESC, dataModel.getDescrip());
         contentValues.put(OWNER, dataModel.getOwner());
         contentValues.put(OWNERADD, dataModel.getOwneradd());
+        contentValues.put(PRICE, dataModel.getPrice());
 
         db.insert(TABLE,null,contentValues);
         db.close();
@@ -70,7 +73,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public DataModel getModel(int id_model){
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursor = db.query(TABLE, new String[]{COLUMN_ID, NAME, TYPE, YEAR, DESC, OWNER, OWNERADD},
+        Cursor cursor = db.query(TABLE, new String[]{COLUMN_ID, NAME, TYPE, YEAR, DESC, OWNER, OWNERADD, PRICE},
                 COLUMN_ID + "=?", new String[]{String.valueOf(id_model)},
                 null, null, null, null);
         if (cursor != null)
@@ -78,7 +81,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         DataModel model = new DataModel(cursor.getString(1),cursor.getString(2),
                 cursor.getString(3),cursor.getString(4),
-                cursor.getString(5),cursor.getString(6));
+                cursor.getString(5),cursor.getString(6),
+                cursor.getString(7));
         return model;
     }
 
@@ -99,12 +103,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             String type = cursor.getString(cursor.getColumnIndexOrThrow("type"));
             String year = cursor.getString(cursor.getColumnIndexOrThrow("year"));
             String desc = cursor.getString(cursor.getColumnIndexOrThrow("descrip"));
+            String price = cursor.getString(cursor.getColumnIndexOrThrow("price"));
             String owner = cursor.getString(cursor.getColumnIndexOrThrow("owner"));
             String owneradd = cursor.getString(cursor.getColumnIndexOrThrow("owneradd"));
             dataModel.setName(name);
             dataModel.setType(type);
             dataModel.setYear(year);
             dataModel.setDescrip(desc);
+            dataModel.setPrice(price);
             dataModel.setOwner(owner);
             dataModel.setOwneradd(owneradd);
             stringBuffer.append(dataModel);

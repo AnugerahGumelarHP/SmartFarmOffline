@@ -9,14 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.battistradadeveloper.smartfarmoffline.home.Register_Penjual;
 import com.battistradadeveloper.smartfarmoffline.home.MainAdmin;
 import com.battistradadeveloper.smartfarmoffline.R;
 
 public class Login extends Fragment {
     EditText edt_email, edt_password;
-    TextView txt_email, txt_password, txt_login;
+    TextView txt_email, txt_password,
+            txt_login, txtregisterpenjual;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -53,6 +54,15 @@ public class Login extends Fragment {
                     builder.setMessage("Username atau Password Anda Salah!")
                             .setNegativeButton("Retry",null).create().show();
                 }
+            }
+        });
+
+        txtregisterpenjual = view.findViewById(R.id.txt_register_penjual);
+        txtregisterpenjual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent register = new Intent(getActivity(), Register_Penjual.class);
+                startActivity(register);
             }
         });
     }

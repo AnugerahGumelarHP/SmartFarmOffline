@@ -38,7 +38,7 @@
                     android:layout_weight="4.0"
                     android:gravity="center_vertical"
                     android:orientation="vertical"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     >
 
                     <!--Menampilkan nama beras-->
@@ -55,7 +55,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=":"
+                            android:text="@string/titik_dua"
                             android:textColor="@color/purple"
                             android:layout_marginEnd="5dp"
                             android:textSize="15sp" />
@@ -82,9 +82,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=":"
+                            android:text="@string/titik_dua"
                             android:textColor="@color/purple"
-                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
                             android:textSize="15sp" />
                         <TextView
                             android:id="@+id/type1"
@@ -109,7 +109,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=":"
+                            android:text="@string/titik_dua"
                             android:textColor="@color/purple"
                             android:layout_marginEnd="5dp"
                             android:textSize="15sp" />
@@ -136,18 +136,46 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=":"
+                            android:text="@string/titik_dua"
                             android:textColor="@color/purple"
-                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
                             android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/desc1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/deskripsi_beras"
+                            android:textColor="@color/purple"
+                            android:maxLines="1"
+                            android:textSize="14sp" />
                     </LinearLayout>
-                    <TextView
-                        android:id="@+id/desc1"
-                        android:layout_width="wrap_content"
+
+                    <!--Menampilkan harga-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/deskripsi_beras"
-                        android:textColor="@color/purple"
-                        android:textSize="14sp" />
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/harga_beras"
+                            android:textColor="@color/purple"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/titik_dua"
+                            android:textColor="@color/purple"
+                            android:layout_marginEnd="5dp"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/price1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/harga_beras"
+                            android:textColor="@color/purple"
+                            android:textSize="14sp" />
+                    </LinearLayout>
 
                     <!--Menampilkan nama penjual-->
                     <LinearLayout
@@ -163,7 +191,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=":"
+                            android:text="@string/titik_dua"
                             android:textColor="@color/purple"
                             android:layout_marginEnd="5dp"
                             android:textSize="15sp" />
@@ -191,7 +219,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=":"
+                            android:text="@string/titik_dua"
                             android:textColor="@color/purple"
                             android:layout_marginEnd="5dp"
                             android:textSize="15sp" />
