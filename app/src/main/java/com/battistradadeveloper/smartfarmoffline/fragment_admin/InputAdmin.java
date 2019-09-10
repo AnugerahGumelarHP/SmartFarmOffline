@@ -112,8 +112,6 @@ public class InputAdmin extends Fragment {
                      edt_admin_alamat.setText("");
                      edt_admin_harga.setText("");
 
-                     Intent home_admin = new Intent(getActivity(), HomeAdmin.class);
-                     startActivity(home_admin);
                 }
             }
         });

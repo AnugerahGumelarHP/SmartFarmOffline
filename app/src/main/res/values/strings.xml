@@ -44,4 +44,8 @@
     <string name="_2019"></string>
     <string name="Sebelum_2019"><![CDATA[< 2019]]></string>
     <string name="tahun_2019">2019</string>
+    <string name="beras_putih">Beras Putih</string>
+    <string name="beras_merah">Beras Merah</string>
+    <string name="semua_beras">Semua Beras</string>
+    <string name="beras_hitam">Beras Hitam</string>
 </resources>
