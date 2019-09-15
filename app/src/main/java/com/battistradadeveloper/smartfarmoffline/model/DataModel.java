@@ -2,29 +2,22 @@ package com.battistradadeveloper.smartfarmoffline.model;
 
 public class DataModel {
     private int id;
-    public String name;
-    private String type;
-    private String year;
-    private String descrip;
-    private String owner;
-    private String owneradd;
-    private String price;
+    public String name, type, year, description, owner, owneradd;
+    private double price;
 
-    public DataModel(){
-    }
-
-    public DataModel(String name, String type, String year, String descrip, String owner,
-                     String owneradd, String price) {
+    public DataModel(int id, String name, String type, String year, String description, String owner,
+                     String owneradd, double price) {
+        this.id= id;
         this.name = name;
         this.type = type;
         this.year = year;
-        this.descrip = descrip;
+        this.description = description;
         this.owner = owner;
         this.owneradd = owneradd;
         this.price = price;
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
@@ -40,9 +33,13 @@ public class DataModel {
         this.name = name;
     }
 
-    public String getType(){return type;}
+    public String getType() {
+        return type;
+    }
 
-    public void setType(String type) {this.type = type; }
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getYear() {
         return year;
@@ -52,12 +49,12 @@ public class DataModel {
         this.year = year;
     }
 
-    public String getDescrip() {
-        return descrip;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescrip(String descrip) {
-        this.descrip = descrip;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getOwner() {
@@ -76,11 +73,11 @@ public class DataModel {
         this.owneradd = owneradd;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 }

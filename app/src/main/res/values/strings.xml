@@ -48,4 +48,15 @@
     <string name="beras_merah">Beras Merah</string>
     <string name="semua_beras">Semua Beras</string>
     <string name="beras_hitam">Beras Hitam</string>
+
+    <array name="type">
+        <item>Beras Putih</item>
+        <item>Beras Merah</item>
+        <item>Beras Hitam</item>
+    </array>
+
+    <array name="year">
+        <item><![CDATA[< 2019]]></item>
+        <item>2019</item>
+    </array>
 </resources>

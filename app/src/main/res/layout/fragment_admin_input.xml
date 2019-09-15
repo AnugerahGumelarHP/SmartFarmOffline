@@ -58,30 +58,11 @@
                     android:text="@string/jenis_beras"
                     android:textStyle="bold"
                     android:textColor="@color/purple"/>
-                <RadioGroup
-                    android:id="@+id/rad_jenis"
+                <Spinner
+                    android:id="@+id/spinnerType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:id="@+id/rad_putih"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/putih"/>
-                    <RadioButton
-                        android:id="@+id/rad_merah"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/merah"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"/>
-                    <RadioButton
-                        android:id="@+id/rad_hitam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/hitam"/>
-                </RadioGroup>
-
+                    android:entries="@array/type"/>
                 <!--Tahun Panen-->
                 <TextView
                     android:id="@+id/txt_input_tahun"
@@ -90,24 +71,11 @@
                     android:text="@string/tahun_panen"
                     android:textStyle="bold"
                     android:textColor="@color/purple"/>
-                <RadioGroup
-                    android:id="@+id/rad_tahun"
+                <Spinner
+                    android:id="@+id/spinnerYear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:id="@+id/rad_before_2019"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Sebelum_2019"
-                        android:layout_marginEnd="10dp"/>
-                    <RadioButton
-                        android:id="@+id/rad_2019"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tahun_2019"/>
-                </RadioGroup>
-
+                    android:entries="@array/year"/>
                 <!--Harga Beras-->
                 <TextView
                     android:id="@+id/txt_input_harga"

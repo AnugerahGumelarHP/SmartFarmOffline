@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 
 import com.battistradadeveloper.smartfarmoffline.R;
 import com.battistradadeveloper.smartfarmoffline.adapter.RecycleAdapter;
-import com.battistradadeveloper.smartfarmoffline.helper.DatabaseHelper;
 import com.battistradadeveloper.smartfarmoffline.model.DataModel;
 
 import java.util.ArrayList;

@@ -1,6 +1,5 @@
 package com.battistradadeveloper.smartfarmoffline.fragment_admin;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -13,7 +12,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.battistradadeveloper.smartfarmoffline.R;
-import com.battistradadeveloper.smartfarmoffline.helper.DatabaseHelper;
 import com.battistradadeveloper.smartfarmoffline.model.DataModel;
 
 public class InputAdmin extends Fragment {
