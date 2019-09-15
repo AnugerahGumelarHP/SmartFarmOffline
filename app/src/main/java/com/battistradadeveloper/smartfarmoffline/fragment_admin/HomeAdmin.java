@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeAdmin extends Fragment{
-    DatabaseHelper database;
     RecyclerView recyclerView;
     RecycleAdapter recycler;
     List<DataModel> datamodel;
@@ -33,8 +32,6 @@ public class HomeAdmin extends Fragment{
         datamodel = new ArrayList<>();
         recyclerView = view.findViewById(R.id.recycle);
 
-        database = new DatabaseHelper(getActivity());
-        datamodel = database.getdata();
 
     }
 

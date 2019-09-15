@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FarmRice extends Fragment {
-    DatabaseHelper database;
     RecyclerView recyclerView;
     RecycleAdapter recycler;
     List<DataModel> datamodel;
@@ -37,16 +36,6 @@ public class FarmRice extends Fragment {
         datamodel = new ArrayList<>();
         recyclerView = view.findViewById(R.id.recycle);
 
-        database = new DatabaseHelper(getActivity());
-        datamodel = database.getdata();
-
-        recycler = new RecycleAdapter(datamodel);
-
-        Log.i("HIteshdata",""+datamodel);
-        RecyclerView.LayoutManager reLayoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(reLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(recycler);
 
     }
 }
