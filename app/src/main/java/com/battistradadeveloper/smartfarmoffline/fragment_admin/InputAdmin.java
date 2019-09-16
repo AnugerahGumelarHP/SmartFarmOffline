@@ -1,5 +1,6 @@
 package com.battistradadeveloper.smartfarmoffline.fragment_admin;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -9,22 +10,25 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.battistradadeveloper.smartfarmoffline.R;
 import com.battistradadeveloper.smartfarmoffline.model.DataModel;
 
 public class InputAdmin extends Fragment {
-    TextView txt_admin_info, txt_admin_beras, txt_admin_jenis,
+    public static final String DATABASE_NAME = "myberasdatabase";
+
+    TextView txtViewViewBeras,
+            txt_admin_info, txt_admin_beras, txt_admin_jenis,
             txt_admin_tahun, txt_admin_deskripsi, txt_admin_harga,
             txt_admin_penjual, txt_admin_alamat, submitdata;
-    EditText edt_admin_beras, edt_admin_jenis, edt_admin_tahun,
-            edt_admin_deskripsi, edt_admin_harga,
+    EditText edt_admin_beras, edt_admin_deskripsi, edt_admin_harga,
             edt_admin_penjual, edt_admin_alamat;
-    String name,type,year,descrip,price,owner,owneraddress;
-    RadioGroup rad_year, rad_type;
-    RadioButton rad_putih, rad_merah, rad_hitam, rad_before_2019, rad_2019;
-    DatabaseHelper databaseHelper;
+    Spinner s_type, s_year;
+
+    SQLiteDatabase mDatabase;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,8 +42,6 @@ public class InputAdmin extends Fragment {
     // Semua pembacaan view dan penambahan listener dilakukan disini (atau // bisa juga didalam onCreateView)
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        databaseHelper = new DatabaseHelper(getActivity());
-
     //  Tulisan info di bagian atas
         txt_admin_info = view.findViewById(R.id.txt_input_info);
 
@@ -57,62 +59,91 @@ public class InputAdmin extends Fragment {
         edt_admin_alamat = view.findViewById(R.id.edt_input_alamat_penjual);
         edt_admin_harga = view.findViewById(R.id.edt_input_harga);
 
-        // TODO RadioGroup has no action
-        rad_type = view.findViewById(R.id.rad_jenis);
-        rad_year = view.findViewById(R.id.rad_tahun);
-
-        //RadioButton for saving data
-        rad_before_2019 = view.findViewById(R.id.rad_before_2019);
-        rad_2019 = view.findViewById(R.id.rad_2019);
-        rad_putih = view.findViewById(R.id.rad_putih);
-        rad_merah = view.findViewById(R.id.rad_merah);
-        rad_hitam = view.findViewById(R.id.rad_hitam);
+        s_type = view.findViewById(R.id.spinnerType);
+        s_year = view.findViewById(R.id.spinnerYear);
 
         submitdata = view.findViewById(R.id.fitur_input_simpan);
         submitdata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name = edt_admin_beras.getText().toString();
-
-                String type = "";
-                if (rad_putih.isChecked()){
-                    type = "Beras Putih";
-                } else if(rad_merah.isChecked()){
-                    type = "Beras Merah";
-                } else {
-                    type = "Beras Hitam";
-                }
-
-                String year = "";
-                if (rad_before_2019.isChecked()){
-                    year = "2019";
-                } else {
-                    year = "Sebelum 2019";
-                }
-
-                descrip = edt_admin_deskripsi.getText().toString();
-                owner = edt_admin_penjual.getText().toString();
-                owneraddress = edt_admin_alamat.getText().toString();
-                price = edt_admin_harga.getText().toString();
-
-                //Toast.makeText(MainActivity.this,name, Toast.LENGTH_SHORT).show();
-                if (name.isEmpty() && type.isEmpty()&& year.isEmpty()&& descrip.isEmpty()&& price.isEmpty() && owner.isEmpty()&& owneraddress.isEmpty()){
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                    builder.setMessage("Data yang anda input belum lengkap")
-                            .setNegativeButton("Retry",null).create().show();
-                }else {
-                     databaseHelper.insertdata(new DataModel(name,type,year,descrip,owner,owneraddress,price));
-                     edt_admin_beras.setText("");
-                     edt_admin_jenis.setText("");
-                     edt_admin_tahun.setText("");
-                     edt_admin_deskripsi.setText("");
-                     edt_admin_penjual.setText("");
-                     edt_admin_alamat.setText("");
-                     edt_admin_harga.setText("");
-
-                }
+                addBerass();
             }
         });
+
+        mDatabase = SQLiteDatabase.openOrCreateDatabase(DATABASE_NAME, null);
+        createBerasTable();
     }
+
+    private void createBerasTable(){
+        mDatabase.execSQL("CREATE TABLE IF NOT EXISTS berass(" +
+                " id INTEGER NOT NULL CONSTRAINT beras_pk PRIMARY KEY AUTOINCREMENT,\n" +
+                " name varchar(200) NOT NULL, \n" +
+                " s_type varchar(200) NOT NULL, \n" +
+                " s_year varchar(200) NOT NULL, \n" +
+                " price double NOT NULL, \n" +
+                " description varchar(200) NOT NULL, \n" +
+                " owner varchar(50) NOT NULL, \n" +
+                " owneradd varchar(200) NOT NULL\n" +
+                ");"
+        );
+    }
+
+    private boolean inputsAreCorrect(String name, String price, String description,
+                                     String owner, String owneraddress){
+        if (name.isEmpty()){
+            edt_admin_beras.setError("Please enter a name");
+            edt_admin_beras.requestFocus();
+            return false;
+        }
+        if (price.isEmpty() || Integer.parseInt(price) <= 0){
+            edt_admin_harga.setError("Please enter price");
+            edt_admin_harga.requestFocus();
+            return false;
+        }
+        if (description.isEmpty()){
+            edt_admin_deskripsi.setError("Plese enter description");
+            edt_admin_deskripsi.requestFocus();
+            return false;
+        }
+        if (owner.isEmpty()){
+            edt_admin_penjual.setError("Please enter owner");
+            edt_admin_penjual.requestFocus();
+            return false;
+        }
+        if (owneraddress.isEmpty()){
+            edt_admin_alamat.setError("Please enter owner address");
+            edt_admin_alamat.requestFocus();
+            return false;
+        }
+        return true;
+    }
+
+    //In this method we will do the create operation
+    private void addBerass(){
+        String name = edt_admin_beras.getText().toString().trim();
+        String type = s_type.getSelectedItem().toString().trim();
+        String year = s_year.getSelectedItem().toString().trim();
+        String price = edt_admin_harga.getText().toString().trim();
+        String description = edt_admin_deskripsi.getText().toString().trim();
+        String owner = edt_admin_penjual.getText().toString().trim();
+        String owneraddress = edt_admin_alamat.getText().toString().trim();
+
+        //validating the inputs
+        if (inputsAreCorrect(name, price, description, owner, owneraddress)){
+            String insertSQL = "INSERT INTO berass \n" +
+                    "(name, type, year, price, description, owner, owneraddress)\n" +
+                    "VALUES \n" +
+                    "(?, ?, ?, ?, ?, ?, ?);";
+
+            //using the same method execsql for inserting values
+            //this time it has two parameters
+            //first is the sql string and second is the parameters that us to be binded with the query
+
+            mDatabase.execSQL(insertSQL, new String[]{name, type, year, price, description, owner, owneraddress});
+
+            Toast.makeText(getActivity(), "Beras Added Successfully", Toast.LENGTH_LONG).show();
+        }
+    }
+
 
 }
